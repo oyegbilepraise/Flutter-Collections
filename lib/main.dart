@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop/constants.dart';
-import 'package:online_shop/screens/home/home_screen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:online_shop/Daily%20Exercise/constants.dart';
+import 'package:online_shop/Daily%20Exercise/widgets/category_card.dart';
+import 'package:online_shop/Online%20Shop/screens/home/home_screen.dart';
+// import 'package:online_shop/Online%20Shop/screens/home/home_screen.dart';
+// import 'package:online_shop/Online%20Shop/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,14 +17,133 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Meditation App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor)
+        // fontFamily: GoogleFonts.cairo(),
+        scaffoldBackgroundColor: kBackgroundColor,
+        textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
-      home: HomeScreen(),
+      // home: const MeditationHomeScreen()
+      home: const HomeScreen(),
+      // debugShowCheckedModeBanner: false,
+      // title: 'Flutter Demo',
+      // theme: ThemeData(
+      //   primarySwatch: Colors.blue,
+      //   visualDensity: VisualDensity.adaptivePlatformDensity,
+      //   textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor)
+      // ),
+      // home: const HomeScreen(),
+    );
+  }
+}
+
+class MeditationHomeScreen extends StatefulWidget {
+  const MeditationHomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<MeditationHomeScreen> createState() => _MeditationHomeScreenState();
+}
+
+class _MeditationHomeScreenState extends State<MeditationHomeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Stack(
+        children: [
+          Container(
+            height: size.height * .45,
+            decoration: const BoxDecoration(
+              color: Color(0XFFF5CEB8),
+              image: DecorationImage(
+                alignment: Alignment.centerLeft,
+                image: AssetImage('assets/images/undraw_pilates_gpdb.png'),
+              ),
+            ),
+          ),
+          SafeArea(
+              child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 52,
+                    width: 52,
+                    decoration: const BoxDecoration(
+                      color: Color(0XFFF2BEA1),
+                      shape: BoxShape.circle,
+                    ),
+                    child: SvgPicture.asset('assets/icons/menu.svg'),
+                  ),
+                ),
+                Text(
+                  'Good Morning Praise',
+                  style: Theme.of(context)
+                      .textTheme
+                      .displaySmall
+                      ?.copyWith(fontWeight: FontWeight.w900),
+                ),
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 20),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20.5),
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Search',
+                      icon: SvgPicture.asset('assets/icons/search.svg',
+                          color: Colors.black38),
+                      border: InputBorder.none,
+                    ),
+                  ),
+                ),
+                Expanded(
+                    child: GridView.count(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                  childAspectRatio: .85,
+                  children: [
+                    CategoryCard(
+                      title: "Diet Recommendation",
+                      svgSrc: "assets/icons/Hamburger.svg",
+                      press: () {},
+                    ),
+                    CategoryCard(
+                      title: "Kegel Exercises",
+                      svgSrc: "assets/icons/Excrecises.svg",
+                      press: () {},
+                    ),
+                    CategoryCard(
+                      title: "Meditation",
+                      svgSrc: "assets/icons/Meditation.svg",
+                      press: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return Container();
+                          }),
+                        );
+                      },
+                    ),
+                    CategoryCard(
+                      title: "Yoga",
+                      svgSrc: "assets/icons/yoga.svg",
+                      press: () {},
+                    ),
+                  ],
+                ))
+              ],
+            ),
+          ))
+        ],
+      ),
     );
   }
 }

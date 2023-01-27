@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:online_shop/screens/details/components/cart_counter.dart';
+import 'package:online_shop/Online%20Shop/screens/details/components/cart_counter.dart';
 
 class CounterWithFavBtn extends StatelessWidget {
   const CounterWithFavBtn({

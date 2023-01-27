@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop/constants.dart';
-import 'package:online_shop/models/Product.dart';
-import 'package:online_shop/screens/details/details_screen.dart';
-import 'package:online_shop/screens/home/components/categories.dart';
-import 'package:online_shop/screens/home/components/item_card.dart';
+import 'package:online_shop/Online%20Shop/models/Product.dart';
+import 'package:online_shop/Online%20Shop/screens/details/details_screen.dart';
+import 'package:online_shop/Online%20Shop/screens/home/components/categories.dart';
+import 'package:online_shop/Online%20Shop/screens/home/components/item_card.dart';
+import 'package:online_shop/Online%20Shop/constants.dart';
+
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);

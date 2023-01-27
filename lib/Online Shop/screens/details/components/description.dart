@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop/constants.dart';
-import 'package:online_shop/models/Product.dart';
+import 'package:online_shop/Online%20Shop/models/Product.dart';
+import 'package:online_shop/Online%20Shop/constants.dart';
 
 class Description extends StatelessWidget {
   const Description({
