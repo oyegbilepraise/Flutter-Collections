@@ -12,6 +12,7 @@ class DetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(backgroundColor: kBlueLightColor, elevation: 0,),
       bottomNavigationBar: const BottomNavBar(),
       body: Stack(
         children: [
