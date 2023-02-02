@@ -17,7 +17,7 @@ class _MeditationHomeScreenState extends State<MeditationHomeScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(),
       body: Stack(
         children: [
           Container(
@@ -55,7 +55,7 @@ class _MeditationHomeScreenState extends State<MeditationHomeScreen> {
                         .displaySmall
                         ?.copyWith(fontWeight: FontWeight.w900),
                   ),
-                  SearchBar(),
+                  const SearchBar(),
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
@@ -70,7 +70,7 @@ class _MeditationHomeScreenState extends State<MeditationHomeScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => DetailsScreen(),
+                                builder: (context) => const DetailsScreen(),
                               ),
                             );
                           },
