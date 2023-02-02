@@ -24,8 +24,8 @@ class JobCard extends StatelessWidget {
         child: Container(
           width: 220,
           padding: const EdgeInsets.all(12),
-          color: Colors.grey[200],
-          // color: isBlack ? Colors.black : Colors.grey[200],
+          // color: Colors.grey[200],
+          color: isBlack ? Colors.black : Colors.grey[200],
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,8 +40,8 @@ class JobCard extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(5),
                     child: Container(
-                      padding: const EdgeInsets.all(8),
-                      color: Colors.grey[500],
+                      padding: const EdgeInsets.all(5),
+                      color: Colors.grey[700],
                       child: const Text(
                         'Part Time',
                         style: TextStyle(color: Colors.white),
@@ -52,10 +52,16 @@ class JobCard extends StatelessWidget {
               ),
               Text(
                 jobTitle,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: isBlack ? Colors.white : Colors.black
+                ),
               ),
-              Text('\$$hourlyRate/hr')
+              Text(
+                '\$$hourlyRate/hr',
+                style: TextStyle(color: isBlack ? Colors.white : Colors.black),
+              )
             ],
           ),
         ),

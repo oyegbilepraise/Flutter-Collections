@@ -12,16 +12,18 @@ class FintechHomePage extends StatefulWidget {
 
 class _FintechHomePageState extends State<FintechHomePage> {
   final List jobsForYou = [
-    ['Uber', 'UI Designer', 'assets/images/uber.png', '45', true],
+    ['Uber', 'UI / UX Designer', 'assets/images/uber.png', '45', true],
     ['Google', 'Product Dev', 'assets/images/google.png', '80', false],
     ['Apple', 'Software Eng', 'assets/images/apple.png', '100', false],
   ];
 
   final List recentJobs = [
-    ['Nike', 'UI Designer', 'assets/images/nike.png', '85'],
+    ['Nike', 'UI / UX Designer', 'assets/images/nike.png', '85'],
     ['Apple', 'Software Eng', 'assets/images/apple.png', '100'],
     ['Google', 'Product Dev', 'assets/images/google.png', '80'],
     ['Uber', 'Marketer', 'assets/images/uber.png', '45'],
+    ['Nike', 'UI / UX Designer', 'assets/images/nike.png', '85'],
+
   ];
   @override
   Widget build(BuildContext context) {
