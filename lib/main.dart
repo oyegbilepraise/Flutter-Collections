@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-// import 'package:online_shop/Daily%20Exercise/constants.dart';
-// import 'package:online_shop/Daily%20Exercise/screens/meditation_home_screen.dart';
-import 'package:online_shop/Fintech/homepage.dart';
 import 'package:online_shop/Music%20App/home_screen.dart';
 import 'package:online_shop/Music%20App/play_list_screen.dart';
 import 'package:online_shop/Music%20App/song_screen.dart';
-// import 'package:online_shop/Online%20Shop/screens/home/home_screen.dart';
-// import 'package:online_shop/Online%20Shop/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       // title: 'Meditation App',
+      // home: HomeScreen()
       title: 'Music App',
       theme: ThemeData(
           textTheme: Theme.of(context)
@@ -30,7 +26,7 @@ class MyApp extends StatelessWidget {
           // scaffoldBackgroundColor: kBackgroundColor,
           // textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
           ),
-      home: const SongScreen(),
+      home: const HomeScreen(),
       getPages: [
         GetPage(name: '/', page: () => const HomeScreen()),
         GetPage(name: '/song', page: () => const SongScreen()),
@@ -38,6 +34,7 @@ class MyApp extends StatelessWidget {
       ],
       // home: FintechHomePage(),
       // home: const MeditationHomeScreen()
+      // home: HomeScreen()
       // home: const HomeScreen(),
       // debugShowCheckedModeBanner: false,
       // title: 'Flutter Demo',
