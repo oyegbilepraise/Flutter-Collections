@@ -24,7 +24,9 @@ class _SongScreenState extends State<SongScreen> {
     audioPlayer.setAudioSource(
       ConcatenatingAudioSource(
         children: [
-          AudioSource.uri(Uri.parse('assets:///${song.url}')),
+          AudioSource.uri(
+            Uri.parse('assets:///${song.url}'),
+          ),
         ],
       ),
     );
@@ -38,12 +40,12 @@ class _SongScreenState extends State<SongScreen> {
 
   Stream<SeekBarData> get _seekBarDataStream =>
       rxdart.Rx.combineLatest2<Duration, Duration?, SeekBarData>(
-          audioPlayer.positionStream, audioPlayer.durationStream, (
-        Duration position,
-        Duration? duration,
-      ) {
-        return SeekBarData(position, duration ?? Duration.zero);
-      });
+        audioPlayer.positionStream,
+        audioPlayer.durationStream,
+        (Duration position, Duration? duration) {
+          return SeekBarData(position, duration ?? Duration.zero);
+        },
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +63,23 @@ class _SongScreenState extends State<SongScreen> {
             fit: BoxFit.cover,
           ),
           const _BackgroundFilter(),
+          // Expanded(
+          //   child: Container(
+          //     height: MediaQuery.of(context).size.height * 0.45,
+          //     child: ListView(
+          //       children: [
+          //         Text(
+          //           song.lorem,
+          //           style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+          //               color: Colors.white,
+          //               letterSpacing: 10,
+          //               wordSpacing: 10,
+          //               height: 2),
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
           _MusicPlayer(
             song: song,
             seekBarDataStream: _seekBarDataStream,

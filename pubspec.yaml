@@ -41,6 +41,7 @@ dependencies:
   get: ^4.6.5
   just_audio: ^0.9.31
   rxdart: ^0.27.7
+  smooth_page_indicator:
 
 dev_dependencies:
   flutter_test:
