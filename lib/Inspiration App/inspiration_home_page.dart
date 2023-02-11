@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class InspirationHomePage extends StatefulWidget {
@@ -22,6 +23,19 @@ class _InspirationHomePageState extends State<InspirationHomePage> {
             color: Colors.black87,
           ),
         ),
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        animationDuration: const Duration(milliseconds: 300),
+        backgroundColor: Colors.black,
+        items: const [
+          Icon(Icons.home),
+          Icon(Icons.shopping_cart),
+          Icon(Icons.favorite),
+          Icon(Icons.settings),
+        ],
+        onTap: (index) {
+          print(index);
+        },
       ),
       body: SafeArea(
         child: Column(
@@ -127,7 +141,41 @@ class _InspirationHomePageState extends State<InspirationHomePage> {
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  const SizedBox(height: 20.0),
+                  Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: const DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/icons/white.jpeg'),
+                      ),
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomRight,
+                          stops: const [0.1, 0.9],
+                          colors: [
+                            Colors.black.withOpacity(.8),
+                            Colors.black.withOpacity(.1)
+                          ],
+                        ),
+                      ),
+                      child: const Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Text(
+                            'Best Design',
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             )
