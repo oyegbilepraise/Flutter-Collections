@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:online_shop/Inspiration%20App/inspiration_home_page.dart';
 import 'package:online_shop/Music%20App/home_screen.dart';
 import 'package:online_shop/Music%20App/play_list_screen.dart';
 import 'package:online_shop/Music%20App/song_screen.dart';
@@ -15,26 +17,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      // title: 'Meditation App',
-      // home: HomeScreen()
+    return const GetMaterialApp(
+      title: 'Inspiration App',
       debugShowCheckedModeBanner: false,
-      title: 'Music App',
-      // theme: ThemeData(
-      //     textTheme: Theme.of(context)
-      //         .textTheme
-      //         .apply(bodyColor: Colors.white, displayColor: Colors.white)
-          // fontFamily: GoogleFonts.cairo(),
-          // scaffoldBackgroundColor: kBackgroundColor,
-          // textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
-          // ),
-      home: const HomePage(),
+      home: const InspirationHomePage(),
+      // theme: ThemeData(fontFamily: GoogleFonts.roboto())
       // getPages: [
       //   GetPage(name: '/', page: () => const HomeScreen()),
       //   GetPage(name: '/song', page: () => const SongScreen()),
       //   GetPage(name: '/playlist', page: () => const PlayListScreen()),
       // ],
-
       // home: FintechHomePage(),
       // home: const MeditationHomeScreen()
       // home: HomeScreen()
