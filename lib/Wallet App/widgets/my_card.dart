@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
   final double balance;
-  final int cardNumber;
+  final String cardNumber;
   final int expiryMonth;
   final int expiryYear;
   final color;
@@ -31,52 +31,40 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            RichText(
-              text: const TextSpan(
-                text: 'Hello',
-                children: [
-                  WidgetSpan(
-                    child: Text('data'),
-                  ),
-                ],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const SizedBox(height: 10),
+                Image.asset('assets/icons/visa.png', height: 50,)
+              ],
+            ),
+            const Text(
+              'Balance',
+              style: TextStyle(color: Colors.white),
+            ),
+            // const SizedBox(height: 10),
+            Text(
+              '\$$balance',
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
               ),
-            )
-            // const SizedBox(height: 10),
-            // Expanded(
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //     children: [
-            //       const Text(
-            //         'Balance',
-            //         style: TextStyle(color: Colors.white),
-            //       ),
-            //       Image.asset('assets/icons/visa.png', height: 100, width: 100),
-            //     ],
-            //   ),
-            // ),
-            // const SizedBox(height: 10),
-            // Text(
-            //   '\$$balance',
-            //   style: const TextStyle(
-            //     color: Colors.white,
-            //     fontSize: 36,
-            //     fontWeight: FontWeight.bold,
-            //   ),
-            // ),
-            // const SizedBox(height: 30),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     Text(
-            //       cardNumber.toString(),
-            //       style: const TextStyle(color: Colors.white),
-            //     ),
-            //     Text(
-            //       '$expiryMonth/$expiryYear',
-            //       style: const TextStyle(color: Colors.white),
-            //     )
-            //   ],
-            // )
+            ),
+            const SizedBox(height: 30),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  cardNumber.toString(),
+                  style: const TextStyle(color: Colors.white),
+                ),
+                Text(
+                  '$expiryMonth/$expiryYear',
+                  style: const TextStyle(color: Colors.white),
+                )
+              ],
+            ),
           ],
         ),
       ),

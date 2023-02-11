@@ -94,21 +94,21 @@ class _HomePageState extends State<HomePage> {
                 children: const [
                   MyCard(
                     balance: 5324.12,
-                    cardNumber: 1234567890,
+                    cardNumber: '**** **** **** 7890',
                     expiryMonth: 12,
                     expiryYear: 24,
                     color: Colors.deepPurple,
                   ),
                   MyCard(
                     balance: 2210.14,
-                    cardNumber: 1234567890,
+                    cardNumber: '**** **** **** 67890',
                     expiryMonth: 07,
                     expiryYear: 30,
                     color: Colors.blue,
                   ),
                   MyCard(
                     balance: 5324.110,
-                    cardNumber: 1234567890,
+                    cardNumber: '**** **** **** 2931',
                     expiryMonth: 03,
                     expiryYear: 29,
                     color: Colors.green,
