@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:online_shop/Inspiration%20App/inspiration_home_page.dart';
-import 'package:online_shop/Music%20App/home_screen.dart';
-import 'package:online_shop/Music%20App/play_list_screen.dart';
-import 'package:online_shop/Music%20App/song_screen.dart';
-import 'package:online_shop/Wallet%20App/home_page.dart';
+// import 'package:google_fonts/google_fonts.dart';
+import 'package:online_shop/Coffe%20UI/coffee_home_page.dart';
+// import 'package:online_shop/Inspiration%20App/inspiration_home_page.dart';
+// import 'package:online_shop/Music%20App/home_screen.dart';
+// import 'package:online_shop/Music%20App/play_list_screen.dart';
+// import 'package:online_shop/Music%20App/song_screen.dart';
+// import 'package:online_shop/Wallet%20App/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,11 +19,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return MaterialApp(
       title: 'Inspiration App',
       debugShowCheckedModeBanner: false,
-      home: const InspirationHomePage(),
-      // theme: ThemeData(fontFamily: GoogleFonts.roboto())
+      home: const CoffeeHomePage(),
+      // home: const InspirationHomePage(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.orange,
+        fontFamily: GoogleFonts.dmSans().fontFamily,
+      ),
       // getPages: [
       //   GetPage(name: '/', page: () => const HomeScreen()),
       //   GetPage(name: '/song', page: () => const SongScreen()),
