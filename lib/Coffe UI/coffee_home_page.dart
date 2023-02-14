@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:online_shop/Coffe%20UI/widgets/coffee_tile.dart';
 import 'package:online_shop/Coffe%20UI/widgets/coffee_type.dart';
 
@@ -150,14 +149,15 @@ class _CoffeeHomePageState extends State<CoffeeHomePage> {
               ],
             ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
+          SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              child: Text(
                 'Special for you',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
-            ],
+            ),
           ),
           const SizedBox(height: 25),
           Expanded(
@@ -167,7 +167,7 @@ class _CoffeeHomePageState extends State<CoffeeHomePage> {
                 children: [
                   Container(
                     padding: const EdgeInsets.all(12),
-                    margin: EdgeInsets.only(bottom: 20),
+                    margin: const EdgeInsets.only(bottom: 20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.black38,
@@ -196,7 +196,7 @@ class _CoffeeHomePageState extends State<CoffeeHomePage> {
                   ),
                   Container(
                     padding: const EdgeInsets.all(12),
-                    margin: EdgeInsets.only(bottom: 20),
+                    margin: const EdgeInsets.only(bottom: 20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.black38,
