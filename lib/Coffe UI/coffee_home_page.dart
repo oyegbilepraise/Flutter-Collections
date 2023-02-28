@@ -199,11 +199,11 @@ class _CoffeeHomePageState extends State<CoffeeHomePage> {
                     child: Row(
                       children: [
                         ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
                             'assets/images/coff.jpeg',
                             height: 80,
                           ),
-                          borderRadius: BorderRadius.circular(15),
                         ),
                         const Expanded(
                           child: Padding(
@@ -211,7 +211,9 @@ class _CoffeeHomePageState extends State<CoffeeHomePage> {
                             child: Text(
                               '5 Coffee Beans You Must Try',
                               style: TextStyle(
-                                  fontSize: 22, fontWeight: FontWeight.bold),
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         )

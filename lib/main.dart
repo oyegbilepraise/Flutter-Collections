@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:online_shop/Coffe%20UI/coffee_home_page.dart';
+import 'package:online_shop/Todo%20App/screens/todo_app_homepage.dart';
 // import 'package:online_shop/Inspiration%20App/inspiration_home_page.dart';
 // import 'package:online_shop/Music%20App/home_screen.dart';
 // import 'package:online_shop/Music%20App/play_list_screen.dart';
@@ -19,14 +21,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+    );
     return MaterialApp(
       title: 'Inspiration App',
       debugShowCheckedModeBanner: false,
-      home: const CoffeeHomePage(),
+      home: TodoAppHomepage(),
       // home: const InspirationHomePage(),
       theme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.orange,
+        // brightness: Brightness.dark,
+        // primarySwatch: Colors.orange,
         fontFamily: GoogleFonts.dmSans().fontFamily,
       ),
       // getPages: [
