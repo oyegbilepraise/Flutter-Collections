@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop/News%20App/screens/article_screen.dart';
+import './screens/article_screen.dart';
 import './widgets/custom_tag.dart';
 import './models/article_model.dart';
 import './widgets/image_container.dart';

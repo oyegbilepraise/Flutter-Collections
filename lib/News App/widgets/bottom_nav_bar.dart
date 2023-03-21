@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop/News%20App/news_home_page.dart';
-import 'package:online_shop/News%20App/screens/discover_screen.dart';
+import '../news_home_page.dart';
+import '../screens/discover_screen.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
